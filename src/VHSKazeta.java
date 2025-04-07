@@ -1,4 +1,3 @@
-
 public class VHSKazeta implements IAudio, IMedia {
 
     private String nazev;
@@ -17,7 +16,7 @@ public class VHSKazeta implements IAudio, IMedia {
 
     }
     public void vypisMediaInfo(){
-        System.out.println("Médium s názvem " +getNazev()+ " bylo vydáno roku " +getRokVydani()+ " a má " +getPocetSkladeb()+ " skladeb");
+        System.out.println("VHSKazeta s názvem " +getNazev()+ " byla vydána roku " +getRokVydani()+ " a má " +getPocetSkladeb()+ " skladeb");
     }
 
 

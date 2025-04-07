@@ -1,4 +1,4 @@
-public class CD implements IMedia {
+public class CD implements IAudio, IMedia {
 
     private String nazev;
     private int rokVydani;
@@ -12,16 +12,18 @@ public class CD implements IMedia {
         this.interpret = interpret;
     }
 
-    public String getNazev() {
 
-        return nazev;
+    public void vypisMediaInfo(){
+        System.out.println("CD s názvem " +getNazev()+ " bylo vydáno roku " +getRokVydani()+ " a má " +getPocetSkladeb()+ " skladeb");
     }
 
-    public int getRokVydani() {
-        return rokVydani;
-    }
 
-    public void vypisMediaInfo() {
+    public void vypisInterpretInfo() {
+        System.out.println("Jméno interpreta je: " +interpret.getJmeno()+ " a narodil se roku: " +interpret.getRokNarozeni());
 
     }
+
+    public int getRokVydani() {return rokVydani;}
+    public String getNazev(){return nazev;}
+    public int getPocetSkladeb(){return pocetSkladeb;}
 }

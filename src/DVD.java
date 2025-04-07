@@ -11,17 +11,13 @@ public class DVD implements IMedia{
         this.delkaTrvani = delkaTrvani;
     }
 
-
-    public String getNazev() {
-
-        return nazev;
+    public void vypisMediaInfo(){
+        System.out.println("DVD s názvem " +getNazev()+ " bylo vydáno roku " +getRokVydani()+ " a má délku trvání" +getDelkaTrvani()+ " (Sekund,minut,hodin,dní,roků,desetiletí,století,tisíciletí,miliony let)");
     }
 
-    public int getRokVydani() {
-        return rokVydani;
-    }
 
-    public void vypisMediaInfo() {
+    public String getNazev() {return nazev;}
+    public int getRokVydani() {return rokVydani;}
+    public int getDelkaTrvani() {return delkaTrvani;}
 
-    }
 }

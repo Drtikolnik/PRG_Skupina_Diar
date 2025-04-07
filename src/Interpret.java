@@ -9,12 +9,8 @@ public class Interpret {
         this.rokNarozeni = rokNarozeni;
     }
 
-
-
-
-
-
     public String getJmeno() {return jmeno;};
     public int getRokNarozeni() {return rokNarozeni;};
+
 
 }

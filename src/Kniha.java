@@ -10,17 +10,14 @@ public class Kniha implements IMedia {
         this.pocetStran = pocetStran;
     }
 
-    public String getNazev() {
 
-        return nazev;
+
+    public void vypisMediaInfo(){
+        System.out.println("Kniha s názvem " +getNazev()+ " byla vydána roku " +getRokVydani()+ " a má " +getPocetStran()+ " stran");
     }
 
-    public int getRokVydani() {
-        return rokVydani;
-    }
-
-    public void vypisMediaInfo() {
-
-    }
+    public String getNazev() {return nazev;}
+    public int getRokVydani() {return rokVydani;}
+    public int getPocetStran() {return pocetStran;}
 }
 
