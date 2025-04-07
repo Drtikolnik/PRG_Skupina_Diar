@@ -8,4 +8,8 @@ public class Interpret {
         this.jmeno = jmeno;
         this.rokNarozeni = rokNarozeni;
     }
+
+
+
+
 }

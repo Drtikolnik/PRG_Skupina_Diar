@@ -1,7 +1,7 @@
 public interface IMedia {
 
-public void getNazev();
-public void getRok();
-public void getMediaInfo();
+public String getNazev();
+public int getRokVydani();
+public void vypisMediaInfo();
 
 }

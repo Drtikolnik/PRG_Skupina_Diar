@@ -1,7 +1,7 @@
 public interface IAudio {
 
-public void vypis();
-public void pocetSkladeb();
+public void vypisInterpretInfo();
+public int getPocetSkladeb();
 
 
 }
