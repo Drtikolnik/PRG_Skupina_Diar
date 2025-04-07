@@ -1,3 +1,4 @@
+
 public class VHSKazeta implements IAudio, IMedia {
 
     private String nazev;
@@ -8,18 +9,20 @@ public class VHSKazeta implements IAudio, IMedia {
 
 
 
-    public VHSKazeta(String nazev,Interpret interpret){
+    public VHSKazeta(String nazev,Interpret interpret,int rokVydani,int pocetSkladeb){
         this.nazev = nazev;
         this.interpret = interpret;
-        
-        //we hate niggars
+        this.rokVydani = rokVydani;
+        this.pocetSkladeb = pocetSkladeb;
+
     }
     public void vypisMediaInfo(){
-        System.out.println("Médium s názvem, ");
+        System.out.println("Médium s názvem " +getNazev()+ " bylo vydáno roku " +getRokVydani()+ " a má " +getPocetSkladeb()+ " skladeb");
     }
 
 
     public void vypisInterpretInfo() {
+        System.out.println("Jméno interpreta je: " +interpret.getJmeno()+ " a narodil se roku: " +interpret.getRokNarozeni());
 
     }
 
