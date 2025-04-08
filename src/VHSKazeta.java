@@ -1,14 +1,15 @@
 public class VHSKazeta implements IAudio, IMedia {
 
     private String nazev;
-    Interpret interpret;
+    private Interpret interpret;
     private int rokVydani;
     private int pocetSkladeb;
+    private String typ;
 
 
 
 
-    public VHSKazeta(String nazev,Interpret interpret,int rokVydani,int pocetSkladeb){
+    public VHSKazeta(String nazev,int rokVydani,int pocetSkladeb,Interpret interpret,String typ){
         this.nazev = nazev;
         this.interpret = interpret;
         this.rokVydani = rokVydani;

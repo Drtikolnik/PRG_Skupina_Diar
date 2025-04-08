@@ -1,11 +1,14 @@
+import java.util.Scanner;
 public class CD implements IAudio, IMedia {
+    Scanner sc = new Scanner(System.in);
 
     private String nazev;
     private int rokVydani;
     private int pocetSkladeb;
-    Interpret interpret;
+    private Interpret interpret;
+    private String typ = "CD";
 
-    public CD(String nazev, int rokVydani, int pocetSkladeb, Interpret interpret) {
+    public CD(String nazev, int rokVydani, int pocetSkladeb,Interpret interpret, String typ) {
         this.nazev = nazev;
         this.rokVydani = rokVydani;
         this.pocetSkladeb = pocetSkladeb;

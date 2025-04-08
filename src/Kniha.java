@@ -3,8 +3,9 @@ public class Kniha implements IMedia {
     private String nazev;
     private int rokVydani;
     private int pocetStran;
+    private String typ;
 
-    Kniha(String nazev, int rokVydani, int pocetStran){
+    Kniha(String nazev, int rokVydani, int pocetStran,String typ){
         this.nazev = nazev;
         this.rokVydani = rokVydani;
         this.pocetStran = pocetStran;

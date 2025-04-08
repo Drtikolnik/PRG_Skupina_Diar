@@ -3,16 +3,17 @@ public class DVD implements IMedia{
     private String nazev;
     private int rokVydani;
     private int delkaTrvani;
+    private String typ;
 
 
-    public DVD (String nazev, int rokVydani,int delkaTrvani) {
+    public DVD (String nazev, int rokVydani,int delkaTrvani, String typ) {
         this.nazev = nazev;
         this.rokVydani = rokVydani;
         this.delkaTrvani = delkaTrvani;
     }
 
     public void vypisMediaInfo(){
-        System.out.println("DVD s názvem " +getNazev()+ " bylo vydáno roku " +getRokVydani()+ " a má délku trvání" +getDelkaTrvani()+ " (Sekund,minut,hodin,dní,roků,desetiletí,století,tisíciletí,miliony let)");
+        System.out.println("DVD s názvem " +getNazev()+ " bylo vydáno roku " +getRokVydani()+ " a má délku trvání" +getDelkaTrvani()+ " (minut)");
     }
 
 

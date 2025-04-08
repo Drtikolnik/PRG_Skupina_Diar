@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        ArrayList<String> nazvy = new ArrayList<>(); //upravit
+        ArrayList<IMedia> zarizeni = new ArrayList<>();
 
         boolean stop = false;
         if (stop == false) {
@@ -24,12 +24,109 @@ public class Main {
                         int x = sc.nextInt();
                         switch (x) {
                             case 1:
+                                System.out.println("Kolik CD chceš zadat?");
+                                int CDCount = sc.nextInt();
+                                sc.nextLine();
+                                for (int l = 0; l < CDCount; l++) {
+                                    System.out.println("Jaký je název CD?");
+                                    String nazev = sc.nextLine();
+                                    System.out.println("Jaký je rok vydání CD?");
+                                    int rokVydani = sc.nextInt();
+                                    sc.nextLine();
+                                    System.out.println("Jaký je počet skladeb CD?");
+                                    int pocetSkladeb = sc.nextInt();
+                                    sc.nextLine();
+
+                                    if(pocetSkladeb > 0){
+                                        System.out.println("Jaké jméno má interpret?");
+                                        String jmeno = sc.nextLine();
+                                        System.out.println("Jaký je rok narození interpreta?");
+                                        int rokNarozeni = sc.nextInt();
+                                        sc.nextLine();
+                                        Interpret interpret = new Interpret(jmeno,rokNarozeni);
+
+                                        zarizeni.add(new CD(nazev,rokVydani,pocetSkladeb,interpret,"CD"));
+                                    }
+                                    else{
+                                        System.err.println("Nelze");
+                                    }
+                                }
+
                                 break;
                             case 2:
+                                System.out.println("Kolik DVD chceš zadat?");
+                                int DVDCount = sc.nextInt();
+                                sc.nextLine();
+                                for (int o = 0; o < DVDCount; o++) {
+                                    System.out.println("Jaký je název DVD?");
+                                    String nazev = sc.nextLine();
+                                    System.out.println("Jaký je rok vydání DVD?");
+                                    int rokVydani = sc.nextInt();
+                                    sc.nextLine();
+                                    System.out.println("Jaký je počet skladeb DVD?");
+                                    int delkaTrvani = sc.nextInt();
+                                    sc.nextLine();
+
+                                    if(delkaTrvani > 0){
+                                        zarizeni.add(new DVD(nazev,rokVydani,delkaTrvani,"DVD"));
+                                    }
+                                    else{
+                                        System.err.println("Nelze");
+                                    }
+                                }
                                 break;
+
+
                             case 3:
+                                System.out.println("Kolik Knih chceš zadat?");
+                                int KnihaCount = sc.nextInt();
+                                sc.nextLine();
+                                for (int p = 0; p < KnihaCount; p++) {
+                                    System.out.println("Jaký je název knihy?");
+                                    String nazev = sc.nextLine();
+                                    System.out.println("Jaký je rok vydání knihy?");
+                                    int rokVydani = sc.nextInt();
+                                    sc.nextLine();
+                                    System.out.println("Jaký je počet stran knihy?");
+                                    int pocetStran = sc.nextInt();
+                                    sc.nextLine();
+
+                                    if(pocetStran > 0){
+                                        zarizeni.add(new Kniha(nazev,rokVydani,pocetStran,"Kniha"));
+                                    }
+                                    else{
+                                        System.err.println("Nelze");
+                                    }
+                                }
                                 break;
                             case 4:
+                                System.out.println("Kolik VHS chceš zadat?");
+                                int VHSCount = sc.nextInt();
+                                sc.nextLine();
+                                for (int l = 0; l < VHSCount; l++) {
+                                    System.out.println("Jaký je název VHS kazety?");
+                                    String nazev = sc.nextLine();
+                                    System.out.println("Jaký je rok vydání VHS kazety?");
+                                    int rokVydani = sc.nextInt();
+                                    sc.nextLine();
+                                    System.out.println("Jaký je počet skladeb VHS kazety?");
+                                    int pocetSkladeb = sc.nextInt();
+                                    sc.nextLine();
+
+                                    if(pocetSkladeb > 0){
+                                        System.out.println("Jaké jméno má interpret?");
+                                        String jmeno = sc.nextLine();
+                                        System.out.println("Jaký je rok narození interpreta?");
+                                        int rokNarozeni = sc.nextInt();
+                                        sc.nextLine();
+                                        Interpret interpret = new Interpret(jmeno,rokNarozeni);
+
+                                        zarizeni.add(new VHSKazeta(nazev,rokVydani,pocetSkladeb,interpret,"VHS"));
+                                    }
+                                    else{
+                                        System.err.println("Nelze");
+                                    }
+                                }
                                 break;
                             default:
                                 System.err.println("Špatně");
@@ -73,7 +170,9 @@ public class Main {
                         int z = sc.nextInt();
                         switch (z) {
                             case 1:
-
+                                for (IMedia zar : zarizeni){
+                                    zar.vypisMediaInfo();
+                                }
 
                                 break;
                             case 2:
@@ -83,6 +182,7 @@ public class Main {
                             case 4:
                                 break;
                             case 5:
+
                                 break;
                             case 6:
                                 break;
