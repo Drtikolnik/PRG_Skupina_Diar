@@ -13,6 +13,7 @@ public class CD implements IAudio, IMedia {
         this.rokVydani = rokVydani;
         this.pocetSkladeb = pocetSkladeb;
         this.interpret = interpret;
+        this.typ = typ;
     }
 
 
@@ -26,7 +27,10 @@ public class CD implements IAudio, IMedia {
 
     }
 
+
+
     public int getRokVydani() {return rokVydani;}
     public String getNazev(){return nazev;}
     public int getPocetSkladeb(){return pocetSkladeb;}
+    public String getTyp() {return typ;}
 }

@@ -10,6 +10,7 @@ public class DVD implements IMedia{
         this.nazev = nazev;
         this.rokVydani = rokVydani;
         this.delkaTrvani = delkaTrvani;
+        this.typ = typ;
     }
 
     public void vypisMediaInfo(){
@@ -17,8 +18,11 @@ public class DVD implements IMedia{
     }
 
 
+
+
     public String getNazev() {return nazev;}
     public int getRokVydani() {return rokVydani;}
     public int getDelkaTrvani() {return delkaTrvani;}
 
+    public String getTyp() {return typ;}
 }

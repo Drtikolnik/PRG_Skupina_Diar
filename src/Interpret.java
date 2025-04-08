@@ -15,5 +15,8 @@ public class Interpret {
     public int getRokNarozeni() {return rokNarozeni;};
 
 
+    public void vypisInterpretInfo(){
+        System.out.println(getJmeno() + " " + getRokNarozeni());
+    }
 
 }

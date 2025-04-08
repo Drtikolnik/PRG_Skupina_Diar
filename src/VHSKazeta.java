@@ -14,6 +14,7 @@ public class VHSKazeta implements IAudio, IMedia {
         this.interpret = interpret;
         this.rokVydani = rokVydani;
         this.pocetSkladeb = pocetSkladeb;
+        this.typ = typ;
 
     }
     public void vypisMediaInfo(){
@@ -26,7 +27,10 @@ public class VHSKazeta implements IAudio, IMedia {
 
     }
 
+
+
     public int getRokVydani() {return rokVydani;}
     public String getNazev(){return nazev;}
     public int getPocetSkladeb(){return pocetSkladeb;}
+    public String getTyp() {return typ;}
 }
