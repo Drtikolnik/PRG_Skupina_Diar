@@ -135,27 +135,17 @@ public class Main {
 
                         break;
                     case 2:
-                        System.out.println("Co chceš smazat");
-                        System.out.println("1 - CD");
-                        System.out.println("2 - DVD");
-                        System.out.println("3 - Kniha");
-                        System.out.println("4 - VHS");
-                        int y = sc.nextInt();
-                        switch (y) {
-                            case 1:
-                                break;
-                            case 2:
-                                break;
-                            case 3:
-                                break;
-                            case 4:
-                                break;
-                            default:
-                                System.err.println("Špatně");
-                                break;
+                        System.out.println("Jaké zařízení by jsi chtěl vymazat? - číslo 1 pro 1. zařízení atd.");
+                        int q = 1;
+                        for (IMedia zar : zarizeni){
+                            System.out.print(q+ " - "); zar.vypisMediaInfo();
+                            q++;
                         }
-
+                        int smazat = sc.nextInt() -1;
+                        sc.nextLine();
+                        zarizeni.remove(smazat);
                         break;
+
                     case 3:
                         System.out.println("Co chceš vypsat");
                         System.out.println("1 - Všechno");
@@ -182,7 +172,7 @@ public class Main {
                             case 4:
                                 break;
                             case 5:
-
+                                System.out.println("Počet všech uložených médií je: "+zarizeni.size());
                                 break;
                             case 6:
                                 break;
@@ -212,6 +202,8 @@ public class Main {
                         System.err.println("2");
                         System.err.println("1");
                         System.err.println("boom");
+                        System.err.println("!yay!");
+                        System.err.println("😛");
                         break;
                 }
             }

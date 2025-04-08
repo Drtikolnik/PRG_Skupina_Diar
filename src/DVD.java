@@ -13,7 +13,7 @@ public class DVD implements IMedia{
     }
 
     public void vypisMediaInfo(){
-        System.out.println("DVD s názvem " +getNazev()+ " bylo vydáno roku " +getRokVydani()+ " a má délku trvání" +getDelkaTrvani()+ " (minut)");
+        System.out.println("DVD s názvem " +getNazev()+ " bylo vydáno roku " +getRokVydani()+ " a má délku trvání " +getDelkaTrvani()+ " (minut)");
     }
 
 
